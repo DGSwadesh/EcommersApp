@@ -1,8 +1,5 @@
 import 'dart:async';
-// import 'package:data_connection_checker/data_connection_checker.dart';
-import 'package:e_commerce_app/View/SigninSignUp/SplashScreen.dart';
 import 'package:e_commerce_app/View/SigninSignUp/loginPage.dart';
-import 'package:e_commerce_app/View/SigninSignUp/welcomeScreen.dart';
 import 'package:e_commerce_app/util/sharePreference_instance.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
@@ -46,20 +43,7 @@ class _MyAppState extends State<MyApp> {
   // var returnWidget1 = WelcomeScreen();
 
   var scafoldKey = GlobalKey<FormState>();
-  var InternetStatus = "Unknown";
-  var contentmessage = "Unknown";
   final applicationStarterController = Get.put(ApplicationStarterController());
-  @override
-  void initState() {
-    // checkConnection(context);
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    // listener.cancel();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +56,8 @@ class _MyAppState extends State<MyApp> {
       builder: () => Obx(() {
         print('main.dart');
         var applicationState = applicationStarterController.state.value;
-        return LoginPage();
+        // return LoginPage();
+        return DashBoard();
         // if (applicationState == ApplicationState.LoggedIn) {
         //   return Dashbord();
         // } else if (applicationState == ApplicationState.LoggedOut) {
@@ -84,24 +69,4 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-//   checkConnection(BuildContext context) async {
-//     listener = DataConnectionChecker().onStatusChange.listen((status) {
-//       switch (status) {
-//        case DataConnectionStatus.connected:
-//          InternetStatus = "Connected to the Internet";
-//          contentmessage = "Connected to the Internet";
-//          _showDialog(InternetStatus, contentmessage, context);
-//          showToast(InternetStatus, red);
-//          break;
-//         case DataConnectionStatus.disconnected:
-//           InternetStatus = "You are disconnected to the Internet. ";
-//            contentmessage = "Please check your internet connection";
-//            _showDialog(InternetStatus, contentmessage, context);
-
-//            showToast(InternetStatus, red);
-//           break;
-//       }
-//     });
-//     return await DataConnectionChecker().connectionStatus;
-//   }
 }

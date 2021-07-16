@@ -36,6 +36,9 @@ dependencies:
   cached_network_image: ^3.0.0
   google_fonts: ^2.1.0 
   shared_preferences: ^2.0.6 
+  # pp_local_notifications: ^0.0.1
+  # local_notifications: ^0.0.7
+  flutter_local_notifications: 5.0.0+4
   
 dev_dependencies:
   flutter_test:
