@@ -8,6 +8,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'Controller/application_starter_controller.dart';
 import 'View/DashBoard/Dashboard.dart';
+import 'View/DashBoard/homePage/MyModel.dart';
+import '';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +37,7 @@ class StartApp extends StatelessWidget {
 }
 
 class MyApp extends StatefulWidget {
+  
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -56,7 +59,7 @@ class _MyAppState extends State<MyApp> {
       builder: () => Obx(() {
         print('main.dart');
         var applicationState = applicationStarterController.state.value;
-        // return LoginPage();
+         return LoginPage();
         return DashBoard();
         // if (applicationState == ApplicationState.LoggedIn) {
         //   return Dashbord();
@@ -65,6 +68,7 @@ class _MyAppState extends State<MyApp> {
         // } else {
         //   return SplashScreen();
         // }
+        
       }),
     );
   }
