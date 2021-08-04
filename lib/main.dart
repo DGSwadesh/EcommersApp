@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/both.dart';
 import 'package:e_commerce_app/util/sharePreference_instance.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -7,9 +8,10 @@ import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:get/get.dart';
 import 'Controller/application_starter_controller.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // DashboardBinding().dependencies();
+  await Firebase.initializeApp();
   SystemChrome.setPreferredOrientations(
           [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
       .then((_) async {
