@@ -7,7 +7,7 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.5.0"
+    version: "2.6.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -468,7 +468,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.19"
+    version: "0.3.0"
   timezone:
     dependency: transitive
     description:
@@ -512,9 +512,5 @@ packages:
     source: hosted
     version: "0.2.0"
 sdks:
-<<<<<<< HEAD
-  dart: ">=2.12.3 <3.0.0"
-=======
   dart: ">=2.13.0 <3.0.0"
->>>>>>> 7ec9e345bd61c85dce5590494efc69e35e21ec59
   flutter: ">=2.0.0"

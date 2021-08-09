@@ -8,12 +8,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:get/get.dart';
 import 'Controller/application_starter_controller.dart';
-<<<<<<< HEAD
-void main() {
-=======
 
 void main() async {
->>>>>>> 7ec9e345bd61c85dce5590494efc69e35e21ec59
   WidgetsFlutterBinding.ensureInitialized();
   // DashboardBinding().dependencies();
   await Firebase.initializeApp();
