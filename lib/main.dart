@@ -1,15 +1,22 @@
 
 import 'package:e_commerce_app/View/Prasanta/SigninSignUp/loginPage.dart';
 import 'package:e_commerce_app/util/sharePreference_instance.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:get/get.dart';
 import 'Controller/application_starter_controller.dart';
+<<<<<<< HEAD
 void main() {
+=======
+
+void main() async {
+>>>>>>> 7ec9e345bd61c85dce5590494efc69e35e21ec59
   WidgetsFlutterBinding.ensureInitialized();
   // DashboardBinding().dependencies();
+  await Firebase.initializeApp();
   SystemChrome.setPreferredOrientations(
           [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
       .then((_) async {
