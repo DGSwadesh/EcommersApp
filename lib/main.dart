@@ -1,16 +1,12 @@
-import 'dart:async';
-import 'package:e_commerce_app/View/SigninSignUp/loginPage.dart';
+
+import 'package:e_commerce_app/View/Prasanta/SigninSignUp/loginPage.dart';
 import 'package:e_commerce_app/util/sharePreference_instance.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:get/get.dart';
 import 'Controller/application_starter_controller.dart';
-import 'View/DashBoard/Dashboard.dart';
-import 'View/DashBoard/homePage/MyModel.dart';
-import '';
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   // DashboardBinding().dependencies();
@@ -59,8 +55,9 @@ class _MyAppState extends State<MyApp> {
       builder: () => Obx(() {
         print('main.dart');
         var applicationState = applicationStarterController.state.value;
-         return LoginPage();
-        return DashBoard();
+
+          return LoginPage();
+        //  return Both();
         // if (applicationState == ApplicationState.LoggedIn) {
         //   return Dashbord();
         // } else if (applicationState == ApplicationState.LoggedOut) {
@@ -72,5 +69,4 @@ class _MyAppState extends State<MyApp> {
       }),
     );
   }
-
 }

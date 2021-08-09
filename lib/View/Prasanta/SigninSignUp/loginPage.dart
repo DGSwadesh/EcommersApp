@@ -1,9 +1,7 @@
 //import 'dart:js';
-import 'package:e_commerce_app/View/DashBoard/Dashboard.dart';
-import 'package:e_commerce_app/View/DashBoard/homePage/homePage.dart';
+import 'package:e_commerce_app/View/Prasanta/DashBoard/Dashboard.dart';
 import 'package:e_commerce_app/util/constant.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui' as ui;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginPage extends StatefulWidget {
@@ -17,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: red,
+      backgroundColor: red,  
       body: Container(
         height: 1.sh,
         width: 1.sw,
@@ -211,7 +209,7 @@ signUpContainer() {
                         autovalidateMode: AutovalidateMode.always,
                         decoration: const InputDecoration(
                           suffixIcon: Icon(Icons.person),
-                          hintText: 'What do people call you?',
+                          hintText: 'Enter your name',
                           labelText: 'Name',labelStyle: TextStyle(fontWeight:FontWeight.bold)
                 ),
                         ),
@@ -220,7 +218,7 @@ signUpContainer() {
                         autovalidateMode: AutovalidateMode.always,
                         decoration: const InputDecoration(
                           suffixIcon: Icon(Icons.email),
-                          hintText: 'What do people call you?',
+                          hintText: 'Enter Your email',
                           labelText: 'Email',labelStyle: TextStyle(fontWeight:FontWeight.bold)
                 ),
                         ),
@@ -229,7 +227,7 @@ signUpContainer() {
                         autovalidateMode: AutovalidateMode.always,
                         decoration: const InputDecoration(
                           suffixIcon: Icon(Icons.vpn_key),
-                          hintText: 'What do people call you?',
+                          hintText: 'Enter your Password',
                           labelText: 'Password',labelStyle: TextStyle(fontWeight:FontWeight.bold)
                 ),
                         ),
@@ -238,7 +236,7 @@ signUpContainer() {
                         autovalidateMode: AutovalidateMode.always,
                         decoration: const InputDecoration(
                           suffixIcon: Icon(Icons.vpn_key),
-                          hintText: 'What do people call you?',
+                          hintText: 'Enter your confirm Password',
                           labelText: 'Comfirm Password',labelStyle: TextStyle(fontWeight:FontWeight.bold)
                 ),
                         ),
