@@ -148,9 +148,23 @@ class _LoginPageState extends State<LoginPage> {
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       )),
                     ),
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DashBoard()));
+                    onTap: () async {
+                      if (_formKey.currentState!.validate()) {
+                        loginController
+                            .login(
+                                email: emailController.text,
+                                password: passwordController.text)
+                            .then((isLogin) {
+                          if (isLogin != null) {
+                            if (isLogin) {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DashBoard()));
+                            }
+                          }
+                        });
+                      }
                     },
                   ),
                 ),
@@ -319,18 +333,23 @@ class _LoginPageState extends State<LoginPage> {
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         )),
                       ),
-                      onTap: () {
+                      onTap: () async {
                         if (_formKey.currentState!.validate()) {
-                          var isLogin = loginController.register(
-                              name: nameController.text,
-                              email: signUpEmailController.text,
-                              password: signUpPasswordController.text);
-                          if (isLogin) {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => DashBoard()));
-                          }
+                          loginController
+                              .register(
+                                  name: nameController.text,
+                                  email: signUpEmailController.text,
+                                  password: signUpPasswordController.text)
+                              .then((isLogin) {
+                            if (isLogin != null) {
+                              if (isLogin) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => DashBoard()));
+                              }
+                            }
+                          });
                         }
                       },
                     ),

@@ -319,17 +319,19 @@ class _LoginPageState extends State<LoginPage> {
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         )),
                       ),
-                      onTap: () {
+                      onTap: () async {
                         if (_formKey.currentState!.validate()) {
-                          var isLogin = loginController.register(
+                          var isLogin = await loginController.register(
                               name: nameController.text,
                               email: signUpEmailController.text,
                               password: signUpPasswordController.text);
-                          if (isLogin) {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => DashBoard()));
+                          if (isLogin != null) {
+                            if (isLogin) {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DashBoard()));
+                            }
                           }
                         }
                       },
