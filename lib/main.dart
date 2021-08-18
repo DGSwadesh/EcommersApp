@@ -1,5 +1,4 @@
-
-import 'package:e_commerce_app/View/Prasanta/SigninSignUp/loginPage.dart';
+import 'package:e_commerce_app/View/SigninSignUp/loginPage.dart';
 import 'package:e_commerce_app/util/sharePreference_instance.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';

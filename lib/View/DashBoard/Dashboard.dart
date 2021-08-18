@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/View/Prasanta/DashBoard/homePage/homePage.dart';
-import 'package:e_commerce_app/View/Prasanta/DashBoard/profile/profile.dart';
+import 'package:e_commerce_app/View/DashBoard/homePage/homePage.dart';
+import 'package:e_commerce_app/View/DashBoard/profile/profile.dart';
 import 'package:e_commerce_app/util/constant.dart';
 import 'package:flutter/material.dart';
 

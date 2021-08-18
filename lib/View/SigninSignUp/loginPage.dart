@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/View/Prasanta/DashBoard/Dashboard.dart';
-import 'package:e_commerce_app/View/Prasanta/SigninSignUp/loginController.dart';
+import 'package:e_commerce_app/View/DashBoard/Dashboard.dart';
+import 'package:e_commerce_app/View/SigninSignUp/loginController.dart';
 import 'package:e_commerce_app/util/constant.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
