@@ -10,7 +10,7 @@ import 'Controller/application_starter_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // DashboardBinding().dependencies();
+  //  DashboardBinding().dependencies();
   await Firebase.initializeApp();
   SystemChrome.setPreferredOrientations(
           [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
@@ -28,7 +28,7 @@ class StartApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(accentColor: Colors.black),
       debugShowCheckedModeBanner: false,
-      // initialBinding: DashboardBinding(),
+      //  initialBinding: DashboardBinding(),
       home: MyApp(),
     );
   }
@@ -41,7 +41,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // var returnWidget1 = WelcomeScreen();
+  //  var returnWidget1 = WelcomeScreen();
 
   var scafoldKey = GlobalKey<FormState>();
   final applicationStarterController = Get.put(ApplicationStarterController());

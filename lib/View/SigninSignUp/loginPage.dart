@@ -2,7 +2,6 @@ import 'package:e_commerce_app/View/DashBoard/Dashboard.dart';
 import 'package:e_commerce_app/View/SigninSignUp/loginController.dart';
 import 'package:e_commerce_app/util/constant.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui' as ui;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -28,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Obx(() {
       return Scaffold(
-        backgroundColor: red,
+        backgroundColor:red,
         body: Stack(
           children: [
             Container(
@@ -67,14 +66,14 @@ class _LoginPageState extends State<LoginPage> {
       children: [
         Container(
           child: CustomPaint(
-            size: Size(1.sw, 0.9.sh),
+            size: Size(1.sw, 1.0.sh),
             painter: RPSCustomPainter(),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(top:50,left: 20,right: 20),
           child: Container(
-            height: 0.8.sh,
+            height: 0.9.sh,
             width: 1.sw,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -96,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                       hintText: 'Enter Your Email',
                       labelText: 'Email',
                       labelStyle: TextStyle(fontWeight: FontWeight.bold)),
-                ),
+                ),SizedBox(height: 20),
                 TextFormField(
                   controller: passwordController,
                   autovalidateMode: AutovalidateMode.always,
@@ -107,13 +106,13 @@ class _LoginPageState extends State<LoginPage> {
                       labelStyle: TextStyle(
                         fontWeight: FontWeight.bold,
                       )),
-                ),
+                ),SizedBox(height: 10),
                 Material(
                   color: Colors.transparent,
                   child: InkWell(
                     onTap: () async {},
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 50),
+                      padding: const EdgeInsets.only(left: 40),
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: Text(
@@ -128,9 +127,9 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height:20),
                 Padding(
-                  padding: EdgeInsets.only(top: 40, left: 0.4.sw),
+                  padding: EdgeInsets.only(top: 60, left: 0.4.sw),
                   child: InkWell(
                     child: Container(
                       width: 200,
@@ -167,9 +166,9 @@ class _LoginPageState extends State<LoginPage> {
                       }
                     },
                   ),
-                ),
+                ),SizedBox(height: 20),
                 Padding(
-                  padding: EdgeInsets.only(top: 80, left: 0.8.sw),
+                  padding: EdgeInsets.only(top:30, left: 0.8.sw),
                   child: InkWell(
                     onTap: () {
                       controller.jumpTo(450);
@@ -198,15 +197,15 @@ class _LoginPageState extends State<LoginPage> {
         quarterTurns: 2,
         child: Container(
           child: CustomPaint(
-            size: Size(1.0.sw, 1.0.sh),
+            size: Size(1.0.sw, 1.2.sh),
             painter: RPSCustomPainter(),
           ),
         ),
       ),
       Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(9.0),
           child: Container(
-              height: 0.8.sh,
+              height: 1.12.sh,
               width: 1.sw,
               child: Column(
                 // crossAxisAlignment: CrossAxisAlignment.center,
@@ -228,7 +227,7 @@ class _LoginPageState extends State<LoginPage> {
                               color: Colors.white)),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height:20),
                   Padding(
                     padding: EdgeInsets.only(top: 7, right: 0.7.sw),
                     child: Text(
@@ -242,7 +241,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                      top: 50,
+                      top: 85,left: 10,right: 10
                     ),
                     child: SingleChildScrollView(
                         child: Form(
@@ -253,13 +252,13 @@ class _LoginPageState extends State<LoginPage> {
                             controller: nameController,
                             autovalidateMode: AutovalidateMode.always,
                             validator: (value) {
-                              // if (value == '' || value!.length < 2) {
-                              //   return 'please enter your name';
-                              // }
+                              if (value == '' || value!.length < 2) {
+                                return 'please enter your name';
+                              }
                             },
                             decoration: const InputDecoration(
                                 suffixIcon: Icon(Icons.person),
-                                hintText: 'What do people call you?',
+                                hintText: 'Enter your name',
                                 labelText: 'Name',
                                 labelStyle:
                                     TextStyle(fontWeight: FontWeight.bold)),
@@ -268,13 +267,13 @@ class _LoginPageState extends State<LoginPage> {
                             controller: signUpEmailController,
                             autovalidateMode: AutovalidateMode.always,
                             validator: (value) {
-                              // if (value == null) {
-                              //   return 'please enter your email';
-                              // }
+                              if (value == null) {
+                                return 'please enter your email';
+                              }
                             },
                             decoration: const InputDecoration(
                                 suffixIcon: Icon(Icons.email),
-                                hintText: 'What do people call you?',
+                                hintText: 'Enter your Email',
                                 labelText: 'Email',
                                 labelStyle:
                                     TextStyle(fontWeight: FontWeight.bold)),
@@ -283,13 +282,13 @@ class _LoginPageState extends State<LoginPage> {
                             controller: signUpPasswordController,
                             autovalidateMode: AutovalidateMode.always,
                             validator: (value) {
-                              // if (value == null) {
-                              //   return 'please enter your password';
-                              // }
+                              if (value == null) {
+                                return 'please enter your password';
+                              }
                             },
                             decoration: const InputDecoration(
                                 suffixIcon: Icon(Icons.vpn_key),
-                                hintText: 'What do people call you?',
+                                hintText: 'Enter your Password',
                                 labelText: 'Password',
                                 labelStyle:
                                     TextStyle(fontWeight: FontWeight.bold)),
@@ -298,24 +297,25 @@ class _LoginPageState extends State<LoginPage> {
                             controller: signUpConfirmPasswordController,
                             autovalidateMode: AutovalidateMode.always,
                             validator: (value) {
-                              // if (value == null) {
-                              //   return 'please enter your password';
-                              // }
+                              if (value == null) {
+                                return 'please enter your password';
+                              }
                             },
-                            decoration: const InputDecoration(
+                             decoration: const InputDecoration(
                                 suffixIcon: Icon(Icons.vpn_key),
-                                hintText: 'What do people call you?',
+                                hintText: 'Enter your Comfirm Password',
                                 labelText: 'Comfirm Password',
                                 labelStyle:
                                     TextStyle(fontWeight: FontWeight.bold)),
                           ),
+                          
                         ],
                       ),
                     )),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height:15),
                   Padding(
-                    padding: EdgeInsets.only(top: 40, right: 0.4.sw),
+                    padding: EdgeInsets.only(top:50, right: 0.4.sw),
                     child: InkWell(
                       child: Container(
                         width: 200,
@@ -361,7 +361,7 @@ class _LoginPageState extends State<LoginPage> {
 
   middleButtonContainer() {
     return Padding(
-      padding: EdgeInsets.only(top: 0.6.sh),
+      padding: EdgeInsets.only(top: 0.7.sh),
       child: Container(
         width: 1.sw,
         height: 0.5.sh,
