@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/View/DashBoard/homePage/homePage.dart';
 import 'package:e_commerce_app/View/SigninSignUp/loginPage.dart';
 import 'package:e_commerce_app/util/sharePreference_instance.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -58,7 +59,8 @@ class _MyAppState extends State<MyApp> {
         print('main.dart');
         var applicationState = applicationStarterController.state.value;
 
-          return LoginPage();
+          return Home();
+          // return LoginPage();
         //  return Both();
         // if (applicationState == ApplicationState.LoggedIn) {
         //   return Dashbord();

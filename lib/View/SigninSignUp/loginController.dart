@@ -35,7 +35,7 @@ class LoginController extends GetxController {
     isLoading.value = true;
     try {
       var result = await firebaseAuth.signInWithEmailAndPassword(
-          email: email, password: password);
+          email: email, password: password,);
       print(result);
       if (result.user != null) {
         isLoading.value = false;
